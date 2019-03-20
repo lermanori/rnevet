@@ -1,3 +1,9 @@
 module.exports = {
-  outputDir: 'docs/'
+  outputDir: 'docs/',
+  publicPath: '/rnevet',
+  assetsDir: undefined,
+  runtimeCompiler: undefined,
+  productionSourceMap: undefined,
+  parallel: undefined,
+  css: undefined
 }
