@@ -1,6 +1,6 @@
 module.exports = {
-  outputDir: 'docs/',
-  publicPath: '/rnevet',
+  outputDir: "docs/",
+  publicPath: process.env.NODE_ENV === "production" ? "/rnevet/" : "/",
   assetsDir: undefined,
   runtimeCompiler: undefined,
   productionSourceMap: undefined,
