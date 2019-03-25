@@ -29,16 +29,12 @@
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title>Application</v-toolbar-title>
     </v-toolbar>
-    <v-content>
-      <v-container fluid fill-height>
-        <v-layout justify-center align-center>
-          
+    <v-content style="z-index:1">
            <transition name="page-transition" mode="out-in" appear enter-active-class="animated fadeInLeft"  leave-active-class="animated fadeOutRight">
             <router-view/>
            </transition>
-        </v-layout>
-      </v-container>
     </v-content>
+      <app-background/>
     <v-footer app fixed>
       
     </v-footer>
@@ -46,12 +42,17 @@
 </template>
 
 <script>
+import Background from "./components/Background"
+
   export default {
     data: () => ({
       drawer: null
     }),
     props: {
       source: String
+    },
+    components:{
+      'app-background':Background
     }
   }
 </script>
